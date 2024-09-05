@@ -3,31 +3,111 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --body_color: #f6f6f6;
+  --primary_grey: #514e4c;
+  --secondary_grey_dark: #CCCCCC;
+  --secondary_grey_light: #EDEDEE;
+  --loader_color: #ededed;
+  --submenu-position: 54px;
+  --header-height: 54px;
+      --background_color: #232222;
+  --label_onSale_Bg: #2538B0;
+  --label_onSale_text: #ffffff;
+  --label_custom_Bg: #ffa500;
+  --label_custom_text: #ffffff;
+  --label_soldOut_Bg: #2538B0;
+  --label_soldOut_text: #ffffff;
+  --alert_success: #2fa34e;
+  --alert_error: #CC0000;
+  --weight_header_font: 500;
+  --weight_paragraf_font: 400;
+  --weight_paragraf_bold_font: 500;
+  --weight_button_font: 500;
+  --pageTransitionColor: #ffffff;
+  --ann-is-transparent: 0;
+  --viewport-height: 100vh;
+  --section_max_width: 1200px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  color-scheme: light;
+}
+
+img {
+  content-visibility: auto;
+  image-rendering: optimizeSpeed;
+}
+
+/* Hide scrollbar for IE and Edge */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--body_color);
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer components {
+
+  .bgImage {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+  }
+
+  .bgHover {
+    background-size: 120%;
+    transition: background-size 0.3s ease-in-out;
+  }
+
+  .bgHover:hover {
+    background-size: 145%;
+  }
+
+  .text-primary {
+    color: var(--body_color);
+  }
+
+  .bg-var-primary-white {
+    background-color: var(--body_color);
+  }
+
+  .text-var-primary {
+    color: var(--background_color);
+  }
+
+  .bg-var-primary {
+    background-color: var(--background_color);
+  }
+
+  .font-header {
+    font-weight:  var(--weight_header_font);
+  }
+
+  .bg_grey_light {
+    background-color: var(--secondary_grey_light);
+  }
+
 }

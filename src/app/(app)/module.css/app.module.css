@@ -1,0 +1,43 @@
+/* From Uiverse.io by Sergestra */
+.fwButtonContainer {
+  width: 255.45px;
+  height: 50.39px;
+  overflow: hidden;
+  border: 1px solid #fff;
+}
+
+
+.fwButtonContainer,
+.fwButtonContainerDiv {
+  transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fwButtonContainerSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50.39px;
+}
+
+.fwButtonContainerDiv1 {
+  background-color: transparent;
+  color: var(--body_color);
+}
+
+.fwButtonContainerDiv2 {
+  background-color: #fff;
+  color: var(--primary_grey);
+}
+
+
+.fwButtonContainer:hover .fwButtonContainerDiv {
+  transform: translateY(-50px);
+}
+
+.fwButtonContainerP {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fwButtonContainer:active {
+  transform: scale(0.95); 
+}
