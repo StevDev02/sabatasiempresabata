@@ -5,7 +5,7 @@ import ButtonSingOut from "../components/Buttons";
 export default function AccountPage() {
   return (
     <main className="w-full flex gap-10 items-center px-[25px] h-[105dvh]">
-      <header className="w-[742px] translate-y-[24px] p-4 bg_grey_light h-[527px] ">
+      <header className="w-[742px] translate-y-[24px] p-4 bg-[#ededee] h-[527px] ">
         <h2 className="text-4xl pb-[90px] leading-[120%] font-bold">Welcome, Steven Sanchez</h2>
         <nav className="w-[236px] h-[168px] flex flex-col items-start justify-between">
           <Link className="text-sm font-medium" href="/account">

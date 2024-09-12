@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		scale: {
+			'95': '0.95',
+		},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -19,6 +22,8 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+			crema: '#f6f6f6',
+			chocolate: '#232222',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -61,6 +66,11 @@ const config: Config = {
   			}
   		}
   	}
+  },
+  variants: {
+    extend: {
+      scale: ['active'],
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };

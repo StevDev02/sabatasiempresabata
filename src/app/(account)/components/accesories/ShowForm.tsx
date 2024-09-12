@@ -9,38 +9,27 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import stylesButton from "@/app/(account)/module.css/addres.module.css";
 import { X } from "lucide-react";
 import { CheckboxWithText } from "./Checkboxs";
+import FWButtonComponent from "@/components/Button/FWButton";
 
 export function AlertDialogDemo() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <div
-          className={`${stylesButton.fwButtonContainer} absolute  top-8 right-0`}
-        >
-          <div
-            className={`${stylesButton.fwButtonContainerDiv} ${stylesButton.fwButtonContainerDiv1}`}
-          >
-            <span className={`${stylesButton.fwButtonContainerSpan}`}>
-              <p className={`${stylesButton.fwButtonContainerP}`}>
-                ADD NEW ADDRESS
-              </p>
-            </span>
-          </div>
-          <div
-            className={`${stylesButton.fwButtonContainerDiv} ${stylesButton.fwButtonContainerDiv2}`}
-          >
-            <span className={`${stylesButton.fwButtonContainerSpan}`}>
-              <p className={`${stylesButton.fwButtonContainerP}`}>
-                ADD NEW ADDRESS
-              </p>
-            </span>
-          </div>
-        </div>
+        <button className="absolute top-4 right-4">
+          <FWButtonComponent
+            width={205}
+            borderColor="#232323"
+            textContent="Add new address"
+            bgOne="transparent"
+            bgTwo="#232323"
+            textOne="#232323"
+            textTwo="#f6f6f6"
+          />
+        </button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className="z-[999] ">
         <AlertDialogCancel className="absolute border-none shadow-none top-4 right-4">
           <X size={20} />
         </AlertDialogCancel>
@@ -48,7 +37,7 @@ export function AlertDialogDemo() {
           <AlertDialogTitle className="text-3xl font-medium">
             Add new address
           </AlertDialogTitle>
-          <form className="overflow-y-scroll py-2 translate-y-4 h-[339px] grid gap-6">
+          <form className="overflow-y-scroll w-[480px] py-2 translate-y-4 h-[275px] grid gap-6">
             <input
               autoComplete="off"
               type="text"
@@ -97,46 +86,28 @@ export function AlertDialogDemo() {
         <AlertDialogDescription className="text-transparent opacity-0">
           *
         </AlertDialogDescription>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="border-none translate-x-4 shadow-none">
-            <div className={`${stylesButton.fwButtonCancel}`}>
-              <div
-                className={`${stylesButton.fwButtonCancelDiv} ${stylesButton.fwButtonCancelDiv1}`}
-              >
-                <span className={`${stylesButton.fwButtonCancelSpan}`}>
-                  <p className={`${stylesButton.fwButtonContainerP}`}>CANCEL</p>
-                </span>
-              </div>
-              <div
-                className={`${stylesButton.fwButtonCancelDiv} ${stylesButton.fwButtonCancelDiv2}`}
-              >
-                <span className={`${stylesButton.fwButtonContainerSpan}`}>
-                  <p className={`${stylesButton.fwButtonCancelP}`}>CANCEL</p>
-                </span>
-              </div>
-            </div>
+        <AlertDialogFooter className="-translate-x-[32px]">
+          <AlertDialogCancel className="border-none translate-x-6 shadow-none">
+            <FWButtonComponent 
+            width={215}
+            borderColor="#232323"
+            textContent="Cancel"
+            bgOne="transparent"
+            bgTwo="#232323"
+            textOne="#232323"
+            textTwo="#f6f6f6"
+            />
           </AlertDialogCancel>
           <AlertDialogAction className="border-none shadow-none">
-            <div className={`${stylesButton.fwButtonAccept}`}>
-              <div
-                className={`${stylesButton.fwButtonAcceptDiv} ${stylesButton.fwButtonAcceptDiv1}`}
-              >
-                <span className={`${stylesButton.fwButtonAcceptSpan}`}>
-                  <p className={`${stylesButton.fwButtonContainerP}`}>
-                    SAVE ADDRESS
-                  </p>
-                </span>
-              </div>
-              <div
-                className={`${stylesButton.fwButtonAcceptDiv} ${stylesButton.fwButtonAcceptDiv2}`}
-              >
-                <span className={`${stylesButton.fwButtonAcceptSpan}`}>
-                  <p className={`${stylesButton.fwButtonAcceptP}`}>
-                    SAVE ADDRESS
-                  </p>
-                </span>
-              </div>
-            </div>
+          <FWButtonComponent 
+            width={215}
+            borderColor="#232323"
+            textContent="Save address"
+            bgOne="#232323"
+            bgTwo="transparent"
+            textOne="#f6f6f6"
+            textTwo="#232323"
+            />
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

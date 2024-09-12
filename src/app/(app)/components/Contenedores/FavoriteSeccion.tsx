@@ -1,31 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useNavBarStore } from "@/components/NavBar/store"
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
-import styles from "../../module.css/button.module.css";
+import { useState } from "react";
 
 export default function FavoriteSeccion() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(true);
+  const { setIsOpenMen, setIsOpenWoman } = useNavBarStore();
 
-  const toggleVisibility = () => setIsVisible(!isVisible);
-  const toggleForm = () => setIsFavorite(!isFavorite);
+  const toggleVisibility = () => {
+    setIsOpenMen(false);
+    setIsOpenWoman(false);
+    setIsVisible(!isVisible);
+  };
 
   return (
     <>
-      <button onClick={toggleVisibility} className="top-6 right-20 fixed z-40">
+
+      <button onClick={toggleVisibility} className="z-40">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
           fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="black"
+          className="size-5"
         >
           <path
-            d="M16.348 0H3.65204C3.07348 0 2.60357 0.469202 2.60357 1.04847V19.1604C2.60357 19.6606 3.0135 20.0007 3.44672 20.0007C3.63087 20.0007 3.81926 19.9393 3.98225 19.8017L9.45956 15.1894C9.61549 15.0582 9.80741 14.9926 10 14.9926C10.1919 14.9926 10.3839 15.0582 10.5398 15.1894L16.0178 19.8017C16.1808 19.9386 16.3692 20.0007 16.5533 20.0007C16.9866 20.0007 17.3965 19.6606 17.3965 19.1604V1.04847C17.3965 0.469202 16.9273 0 16.348 0Z"
-            fill="#fff"
-          ></path>
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+          />
         </svg>
       </button>
 
@@ -45,14 +50,29 @@ export default function FavoriteSeccion() {
         initial={{ x: "100%" }}
         animate={{ x: isVisible ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed grid place-content-center top-0 right-0 w-[480px] h-[100dvh] bg-var-primary-white shadow-lg p-8 overflow-y-auto z-50"
+        className="fixed grid place-content-center top-0 right-0 w-[480px] h-[100dvh] bg-crema shadow-lg p-8 overflow-y-auto z-50"
       >
         <button onClick={toggleVisibility} className="absolute top-4 right-4">
-          <X className="h-6 w-6" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
         </button>
 
         <h2 className="text-xl font-medium mb-6">Favorites</h2>
+
       </motion.div>
+      
     </>
   );
 }

@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { type ProductCarousel } from "../../const/Index"; 
+import React, { useState, useRef } from "react";
+import { type ProductCarousel } from "../../const/Index";
+import SetFavoriteOption from "@/components/Favorite/SetFavoriteOption";
 
 export default function ProductCarousel({
   products,
@@ -13,22 +13,6 @@ export default function ProductCarousel({
   const [itemsPerPage, setItemsPerPage] = useState(4);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
-
-  const updateItemsPerPage = useCallback(() => {
-    const width = window.innerWidth;
-    if (width < 640) setItemsPerPage(1);
-    else if (width < 1024) setItemsPerPage(2);
-    else if (width < 1280) setItemsPerPage(3);
-    else setItemsPerPage(4);
-  }, []);
-
-  useEffect(() => {
-    // Inicializa el estado del carrusel después de la primera renderización
-    const handleResize = () => updateItemsPerPage();
-    handleResize(); // Llama a la función para calcular el tamaño inicial
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [updateItemsPerPage]);
 
   const smoothScroll = (index: number) => {
     setIsTransitioning(true);
@@ -81,25 +65,7 @@ export default function ProductCarousel({
                 className="w-full aspect-[2/3] object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               />
 
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute bottom-2 right-2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M13.0776 0H2.92081C2.45796 0 2.08203 0.375362 2.08203 0.838778V15.3283C2.08203 15.7285 2.40998 16.0006 2.75655 16.0006C2.90388 16.0006 3.05458 15.9515 3.18497 15.8414L7.56683 12.1516C7.69157 12.0466 7.8451 11.9941 7.9992 11.9941C8.15273 11.9941 8.30626 12.0466 8.43101 12.1516L12.8134 15.8414C12.9438 15.9509 13.0945 16.0006 13.2418 16.0006C13.5884 16.0006 13.9164 15.7285 13.9164 15.3283V0.838778C13.9164 0.375362 13.541 0 13.0776 0ZM13.239 15.3142L8.86733 11.6334C8.62461 11.4291 8.31642 11.3167 7.9992 11.3167C7.68197 11.3167 7.37322 11.4291 7.1305 11.6334L2.75938 15.3142V0.838778C2.75938 0.750159 2.83163 0.677344 2.92081 0.677344H13.0782C13.1668 0.677344 13.2396 0.749594 13.2396 0.838778V15.3142H13.239Z"
-                    fill="black"
-                  ></path>
-                </svg>
-                <span className="sr-only">Add to wishlist</span>
-              </Button>
+              <SetFavoriteOption />
             </div>
             <div className="mt-2 px-4 flex justify-between items-center">
               <span className="text-xs font-normal">{product.name}</span>
@@ -109,9 +75,7 @@ export default function ProductCarousel({
         ))}
       </div>
       {!isAtStart && (
-        <Button
-          variant="outline"
-          size="icon"
+        <button
           className="absolute border-none top-1/2 left-4 transform -translate-y-1/2 transition-opacity duration-300"
           onClick={prevSlide}
           disabled={isTransitioning}
@@ -130,12 +94,10 @@ export default function ProductCarousel({
             ></path>
           </svg>
           <span className="sr-only">Previous slide</span>
-        </Button>
+        </button>
       )}
       {!isAtEnd && (
-        <Button
-          variant="outline"
-          size="icon"
+        <button
           className="absolute border-none top-1/2 right-4 transform -translate-y-1/2 transition-opacity duration-300"
           onClick={nextSlide}
           disabled={isTransitioning}
@@ -154,7 +116,7 @@ export default function ProductCarousel({
             ></path>
           </svg>
           <span className="sr-only">Next slide</span>
-        </Button>
+        </button>
       )}
     </div>
   );
