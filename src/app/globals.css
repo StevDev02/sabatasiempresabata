@@ -2,33 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --body_color: #f6f6f6;
-  --primary_grey: #514e4c;
-  --secondary_grey_dark: #CCCCCC;
-  --secondary_grey_light: #EDEDEE;
-  --loader_color: #ededed;
-  --submenu-position: 54px;
-  --header-height: 54px;
-      --background_color: #232222;
-  --label_onSale_Bg: #2538B0;
-  --label_onSale_text: #ffffff;
-  --label_custom_Bg: #ffa500;
-  --label_custom_text: #ffffff;
-  --label_soldOut_Bg: #2538B0;
-  --label_soldOut_text: #ffffff;
-  --alert_success: #2fa34e;
-  --alert_error: #CC0000;
-  --weight_header_font: 500;
-  --weight_paragraf_font: 400;
-  --weight_paragraf_bold_font: 500;
-  --weight_button_font: 500;
-  --pageTransitionColor: #ffffff;
-  --ann-is-transparent: 0;
-  --viewport-height: 100vh;
-  --section_max_width: 1200px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +22,7 @@ img {
 body {
   height: 100%;
   overflow: hidden;
-  background-color: var(--body_color);
+  background-color: #f6f6f6;
   -ms-overflow-style: none;
 }
 
@@ -58,10 +31,58 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-option {
+  position: relative;
+  display: inline-block;
+}
+
+.text-option::after {
+  content: "";
+  display: block;
+  width: 30%;
+  background-color: #232222;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-option:hover::after {
+  height: 1px;
+  width: 100%;
+}
+
+.text-select::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: #232222;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-is-select::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 1px;
+  background-color: #232222;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-is-select:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.text-select:hover::after {
+  width: 100%;
 }
 
 @layer components {
@@ -84,30 +105,6 @@ body::-webkit-scrollbar {
 
   .bgHover:hover {
     background-size: 145%;
-  }
-
-  .text-primary {
-    color: var(--body_color);
-  }
-
-  .bg-var-primary-white {
-    background-color: var(--body_color);
-  }
-
-  .text-var-primary {
-    color: var(--background_color);
-  }
-
-  .bg-var-primary {
-    background-color: var(--background_color);
-  }
-
-  .font-header {
-    font-weight:  var(--weight_header_font);
-  }
-
-  .bg_grey_light {
-    background-color: var(--secondary_grey_light);
   }
 
 }
