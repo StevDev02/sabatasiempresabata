@@ -15,7 +15,7 @@ export default function ContactOption() {
       className="w-full text-sm relative z-50"
       onMouseEnter={handleMouseEnter}
     >
-      <Link className="text-option" href="/">
+      <Link className="text-option" href="/contact">
         CONTACTO
       </Link>
     </li>

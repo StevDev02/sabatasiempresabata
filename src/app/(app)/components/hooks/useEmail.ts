@@ -37,6 +37,7 @@ export const useEmail = () => {
       email,
       emailError,
       setEmail,
+      setEmailError
     };
   };
   

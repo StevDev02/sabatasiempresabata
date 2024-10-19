@@ -44,5 +44,6 @@ export const useFirstName = () => {
     firstName,
     firstNameError,
     setFirstName,
+    setFirstNameError
   };
 };

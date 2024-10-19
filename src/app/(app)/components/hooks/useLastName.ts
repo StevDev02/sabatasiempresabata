@@ -34,5 +34,6 @@ export const useLastName = () => {
     lastName,
     lastNameError,
     setLastName,
+    setLastNameError
   };
 };

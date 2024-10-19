@@ -3,6 +3,7 @@ import "./globals.css";
 import { montserrat } from "@/assets/Fonts/Index";
 import FooterGlobal from "@/components/FooterGlobal";
 import NavbarGlobal from "@/components/NavbarGlobal";
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: "Sabata siempre sabata",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <NavbarGlobal />
         {children}
         <FooterGlobal/>
+        <Toaster richColors  position="top-center"/>
       </body>
     </html>
   );
