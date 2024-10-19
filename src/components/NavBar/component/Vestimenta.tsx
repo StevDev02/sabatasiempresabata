@@ -11,7 +11,7 @@ export default function WomanOption() {
     <>
       <Link
         onClick={handleClick}
-        href="/collection/vestimenta"
+        href="/collection/vestimenta/all"
         className={`z-50 text-option text-sm ${isOpenWoman ? "font-medium" : ""}`}
         onMouseEnter={handleMouseEnter}
       >

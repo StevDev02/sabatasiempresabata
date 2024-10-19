@@ -1,10 +1,10 @@
 import CartSeccion from "@/app/(app)/components/Contenedores/CartSeccion";
 import FavoriteSeccion from "@/app/(app)/components/Contenedores/FavoriteSeccion";
-import AuthForm from "@/app/(app)/components/Contenedores/LoginRegister";
 import ManOption from "./NavBar/component/Zapatos";
 import WomanOption from "./NavBar/component/Vestimenta";
 import ContactOption from "./NavBar/component/Contact";
 import LogoOption from "./NavBar/component/Logo";
+import AuthIconSelect from "./NavBar/component/auth/AuthIcon";
 
 export default function NavbarGlobal() {
   return (
@@ -21,9 +21,10 @@ export default function NavbarGlobal() {
         <div className="flex h-[82px] items-center justify-center gap-6">
           <CartSeccion />
           <FavoriteSeccion />
-          <AuthForm />
+          <AuthIconSelect />
         </div>
       </div>
+
     </nav>
   );
 }

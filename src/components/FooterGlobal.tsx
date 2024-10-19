@@ -4,7 +4,7 @@ import FWButtonComponent from "./Button/FWButton";
 export default function Footer() {
   return (
     <>
-      <footer className="w-full h-full">
+      <footer className="w-full h-full bg-crema">
         <div className="w-full flex justify-around py-8 max-h-[276px] h-[276px] border border-black">
           <div>
             <img
@@ -23,19 +23,22 @@ export default function Footer() {
               aria-label="Open Dropdown"
               tabIndex={0}
             >
-              <p className="font-medium text-lg">Customer Service</p>
+              <p className="font-medium text-lg">Information Service</p>
               <span className="Dropdown--Plus not_desktop"></span>
             </div>
             <div className="Dropdown--Content" aria-hidden="true">
               <div className="grid gap-2">
                 <div className="footer--LinkList__Item">
-                  <a className="font-normal text-base" href="/pages/contact">
+                  <a className="font-normal text-base" href="/contact">
                     Contact us
                   </a>
                 </div>
 
                 <div className="footer--LinkList__Item">
-                  <a className="font-normal text-base" href="/pages/payments">
+                  <a
+                    className="font-normal text-base"
+                    href="/information/payments"
+                  >
                     Payments
                   </a>
                 </div>
@@ -43,21 +46,27 @@ export default function Footer() {
                 <div className="footer--LinkList__Item">
                   <a
                     className="font-normal text-base"
-                    href="/pages/shipping-and-returns"
+                    href="/information/shipping-and-return"
                   >
                     Shipping &amp; Returns
                   </a>
                 </div>
 
                 <div className="footer--LinkList__Item">
-                  <a className="font-normal text-base" href="/pages/guarantee">
-                    Guarantee
+                  <a
+                    className="font-normal text-base"
+                    href="/information/general-terms"
+                  >
+                    General Terms
                   </a>
                 </div>
 
                 <div className="footer--LinkList__Item">
-                  <a className="font-normal text-base" href="/pages/retailers">
-                    Retailers
+                  <a
+                    className="font-normal text-base"
+                    href="/information/privacy-policy"
+                  >
+                    Privacy Policy
                   </a>
                 </div>
               </div>
@@ -80,22 +89,23 @@ export default function Footer() {
                 <div className="footer--LinkList__Item">
                   <a
                     className="font-normal text-base"
-                    href="/blogs/news/the-story-of-elvine"
+                    href="/blogs/the-story-of-sabata"
                   >
-                    The Story of ELVINE
+                    The Story of Sabata
                   </a>
                 </div>
 
                 <div className="footer--LinkList__Item">
-                  <a className="font-normal text-base" href="/blogs/news">
-                    ELVINE World
+                  <a className="font-normal text-base" href="/blogs/the-story-of-sabata#sabata-in-the-world">
+                    Sabata in the World
                   </a>
                 </div>
-
+                <span className="Dropdown--Plus not_desktop"></span>
+                <p className="font-medium text-lg">Size Guide</p>
                 <div className="footer--LinkList__Item">
                   <a
                     className="font-normal text-base"
-                    href="/pages/size-guide-for-women"
+                    href="/blogs/size-guide-for-women"
                   >
                     Size Guide for Women
                   </a>
@@ -104,7 +114,7 @@ export default function Footer() {
                 <div className="footer--LinkList__Item">
                   <a
                     className="font-normal text-base"
-                    href="/pages/size-guide-page"
+                    href="/blogs/size-guide-for-men"
                   >
                     Size Guide for Men
                   </a>
@@ -599,13 +609,13 @@ export default function Footer() {
         <div className="w-full  h-[74px] max-h-[74px] border-green-400">
           <ul className="flex w-full translate-y-4 h-[42px] items-center justify-center gap-4 text-[#514e4c] text-[.75rem] text-center">
             <li>
-              <Link href="/">/ General Terms /</Link>
+              <Link href="/information/general-terms">/ General Terms /</Link>
             </li>
             <li>
-              <Link href="/">/ Privacy Policy /</Link>
+              <Link href="/information/privacy-policy">/ Privacy Policy /</Link>
             </li>
             <li>
-              <Link href="/">/ Cookie Policy /</Link>
+              <Link href="/information/cookie-policy">/ Cookie Policy /</Link>
             </li>
           </ul>
         </div>

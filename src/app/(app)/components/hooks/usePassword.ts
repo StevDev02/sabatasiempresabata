@@ -6,6 +6,7 @@ export const usePassword = () => {
   const isFirstInput = useRef(true);
   const [showPassword, setShowPassword] = useState(false);
   const passwordInputRef = useRef<HTMLInputElement>(null)
+  const [isRegister, setIsRegister] = useState(false);
 
   useEffect(() => {
     if (isFirstInput.current) {
@@ -41,6 +42,8 @@ export const usePassword = () => {
   }, [password]);
   
 
+  
+
 
   return {
     password,
@@ -49,6 +52,8 @@ export const usePassword = () => {
     setPasswordError,
     showPassword,
     setShowPassword,
-    passwordInputRef
+    passwordInputRef,
+    isRegister,
+    setIsRegister
   }
 }

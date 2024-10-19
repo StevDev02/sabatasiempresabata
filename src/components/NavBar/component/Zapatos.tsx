@@ -11,7 +11,7 @@ export default function ManOption() {
     <>
       <Link
         onClick={handleClick}
-        href="/collection/zapatos"
+        href="/collection/zapatos/all"
         className={`z-50 text-sm text-option ${isOpenMen ? "font-medium" : ""}`}
         onMouseEnter={handleMouseEnter}
       >
