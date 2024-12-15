@@ -2,9 +2,17 @@ export default function AboutUsPage() {
   return (
     <main className="pb-[104px] pt-32 w-full text-chocolate">
       <section className="grid gap-8 w-full px-20">
-        <h1 className="text-7xl font-bold">Historia de SABATA</h1>
+        <h1 className="text-7xl font-bold">Story of SABATA</h1>
         <p className="text-base leading-7 w-full">
-        Sabata, fundada en noviembre de 2017 en el Barrio Carapungo, al norte de Quito, nació con la misión de empoderar a las mujeres a través de calzado femenino de calidad. Creada por Paulina Guerrero, Sabata no solo ofrece zapatos, sino una experiencia única de confianza, comodidad y estilo que acompaña a cada mujer en sus pasos hacia el éxito, desde el trabajo hasta los momentos especiales.
+          Como verdaderos Gotemburgo con el puerto, el sentido del humor y el
+          mal tiempo en nuestra sangre, la ciudad se ha convertido en la base
+          misma de nuestra existencia. El clima impredecible nos ha empujado a
+          diseñar chaquetas sólidas y funcionales para un estilo de vida de la
+          ciudad y, como habitantes de la segunda ciudad de Suecia con una
+          fuerte cultura obrera, nos sentimos cómodos en una colección sin
+          esfuerzo. Pero lo mejor de todo es el ambiente agradable en
+          Gotemburgo, que ha hecho de SABATA una marca exuberante y acogedora
+          para todas las personas.
         </p>
         <p className="text-sm">
           <strong>Daniel Mänd – Founder and Creative Director</strong>
@@ -21,14 +29,25 @@ export default function AboutUsPage() {
         <div>
           <h2 className="text-xl font-semibold pb-4">De Ecuador con amor</h2>
           <p className="text-[14px] leading-7 w-full">
-          En Sabata, nos especializamos en brindar calzado cómodo y de alta calidad que se adapta a las necesidades de mujeres dinámicas y modernas. Nuestro compromiso con la atención personalizada ha sido clave para construir una comunidad leal de mujeres que confían en la marca y comparten valores de superación personal.
+            SABATA fue fundada en 2001 por el artista callejero sueco Daniel
+            Mänd. Llamó a la compañía SABATA en homenaje a su abuela SABATA
+            Mänd, una rigurosa costurera de Estonia que huyó a la segunda ciudad
+            sueca de Gotemburgo en los 50’. Su nieto creativo heredó su pasión
+            por la artesanía, la calidad genuina y un buen ojo para los
+            detalles.
             <br />
             <br />
-            Cada par de zapatos no solo ofrece lo último en tendencias, sino también la durabilidad y el confort que cada mujer merece.
-
+            Al crecer en las calles en un suburbio llamado Kortedala, Daniel
+            quería crear algo que viniera completamente de él y de la cultura
+            callejera sin refinar de Gotemburgo, pero hecho en la tradición de
+            su abuela.
             <br />
             <br />
-            Hoy, Sabata sigue creciendo, expandiendo su impacto a través de redes sociales y creando un espacio donde las mujeres puedan inspirarse mutuamente. "Sabata: Porque cada paso que das es el comienzo de algo grande." Únete a nuestra comunidad y comparte tu historia con nosotros
+            SABATA nació, y desde entonces ha ofrecido ropa casual sin sentido
+            con un toque de inteligencia y gran ajuste para un estilo de vida
+            relajado en la ciudad. En otras palabras, ropa sofisticada para un
+            comportamiento poco sofisticado que se adapte a las aceras en lugar
+            de pasarelas.
           </p>
         </div>
         <div>
