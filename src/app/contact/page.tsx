@@ -7,59 +7,58 @@ export default function ContactPage() {
     <main className="w-full h-[190dvh] grid gap-12 px-32 py-[135px]">
       <section>
         <h2 className="text-chocolate h-[140px] text-7xl font-semibold">
-          Contacs
+          Contáctanos
         </h2>
         <ul className="grid justify-center items-center w-full gap-56 grid-cols-4">
           <li className="w-[268px] h-[273.13px]">
             <h5 className="text-lg pb-3 font-medium">
-              Customer service opening hours:
+              Horario de atención al cliente:
             </h5>
             <div className="grid gap-y-4">
               <div className="grid gap-y-1">
-                <p className="text-[.875rem]">Monday – Friday: 09.00 – 17.00</p>
-                <p className="text-[.875rem]">Guayaquil Time</p>
+                <p className="text-[.875rem]">Lunes – Viernes: 11.00 – 19.00</p>
+                <p className="text-[.875rem]">Hora de Guayaquil</p>
               </div>
               <div>
                 <p className="text-[.875rem]">
-                  Please note that our customer service is closed on Swedish
-                  public holidays.
+                  Por favor, tenga en cuenta que nuestro servicio de atención al cliente está cerrado en días festivos.
                 </p>
               </div>
             </div>
           </li>
 
           <li className="w-[268px] grid h-[273.13px]">
-            <h4 className="text-xl font-medium">Contcat us</h4>
+            <h4 className="text-xl font-medium">Contáctanos</h4>
             <div className="grid gap-y-4">
               <p className="text-[.875rem]">
-                <span className="font-bold">Phone:</span> +593 99 535 8491
+                <span className="font-bold">Teléfono:</span> +593 98 419 6096
               </p>
               <p className="text-[.875rem]">
                 <span className="font-bold">General inquiries:</span>{" "}
-                info@santacruz.com
+                sabatasiempresabata@gmail.com
               </p>
               <p className="text-[.875rem]">
                 <span className="font-bold">Software:</span> stevdev04@gmail.com
               </p>
               <p className="text-[.875rem]">
-                <span className="font-bold">Economy/Finance:</span>{" "}
-                info@santacruz.com
+                <span className="font-bold">Economía/Finanzas:</span>{" "}
+                sabatasiempresabata@gmail.com
               </p>
               <p className="text-[.875rem]">
-                <span className="font-bold">CEO/Sales:</span> info@santacruz.com
+                <span className="font-bold">CEO/Ventas:</span> sabatasiempresabata@gmail.com
               </p>
             </div>
           </li>
 
           <li className="w-[268px] h-[273.13px]">
-            <h4 className="text-xl pb-3 font-medium">Our address</h4>
+            <h4 className="text-xl pb-3 font-medium">Nuestra dirección</h4>
             <p className="text-[.875rem]">
-              Första Långgatan 4 SE-413 03 Gothenburg Sweden
+            Carapungo, Galo Plaza Laso y Quilindaña
             </p>
           </li>
 
           <li className="w-[268px] h-[273.13px]">
-            <h4 className="text-xl pb-3 font-medium">Follow us</h4>
+            <h4 className="text-xl pb-3 font-medium">Síguenos</h4>
             <div className="grid gap-y-1">
               <Link className="text-[.875rem] underline" href="instagram.com">
                 Instagram
@@ -80,33 +79,34 @@ export default function ContactPage() {
         />
         <div className="">
           <h2 className="text-chocolate h-[140px] text-4xl font-semibold">
-            Send us a message
+            Envíanos un mensaje
           </h2>
           <form className="grid -translate-y-20 gap-4">
             <input
               type="name"
-              placeholder="Name"
+              placeholder="Nombre"
               className="w-full focus:outline-none h-[44px] px-3 bg-transparent border border-gray-300"
             />
             <div className="flex gap-4">
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Correo electrónico"
                 className="w-full focus:outline-none h-[44px] px-3 bg-transparent border border-gray-300"
               />
               <input
                 type="phone"
-                placeholder="Phone"
+                placeholder="Teléfono"
                 className="w-full focus:outline-none h-[44px] px-3 bg-transparent border border-gray-300"
               />
             </div>
             <textarea
               className="w-full h-[148px] focus:outline-none px-3 bg-transparent border border-gray-300"
               name="message"
+              placeholder="Mensaje"
             ></textarea>
             <div className="grid gap-4 mt-4">
-                <CheckboxWithTextContact url="/information/general-terms" textUrl="Accept terms and conditions" TextInformation="You agree to our Terms of Service and Privacy Policy."/> 
-                <CheckboxWithTextContact url="/information/privacy-policy" textUrl="Read privacy policies " TextInformation="Please read our advertising policies before the situation" /> 
+                <CheckboxWithTextContact url="/information/general-terms" textUrl="Aceptar términos y condiciones" TextInformation="Aceptas nuestros términos de servicio y política de privacidad."/> 
+                <CheckboxWithTextContact url="/information/privacy-policy" textUrl="Leer políticas de privacidad" TextInformation="Por favor, lee nuestras políticas de publicidad antes de la situación" /> 
             </div>
             <button className="mt-4">
               <FWButtonComponent
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 textOne="#232323"
                 textTwo="#f6f6f6"
                 borderColor="#232323"
-                textContent="Send Message"
+                textContent="Enviar mensaje"
               />
             </button>
           </form>

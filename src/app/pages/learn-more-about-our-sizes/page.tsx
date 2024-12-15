@@ -2,7 +2,7 @@ export default function LearnMoreAboutOurSizesPage() {
   return (
     <main className="h-[170dvh] pt-16 w-full grid place-items-center text-chocolate">
       <div className="w-[661px] grid gap-4">
-        <h1 className="text-3xl font-medium">Learn more about our sizes</h1>
+        <h1 className="text-3xl font-medium">Aprende más sobre nuestras tallas</h1>
         <p className="text-sm">
           Obtenga más información sobre nuestra Empresa,
           <br />

@@ -10,10 +10,10 @@ export default function NavBarFAQ() {
             Support & FAQ
           </h2>
           <p className="text-[.875rem] text-chocolate ">
-            Check out the FAQ , and if you are still unsure about something, do
-            not hesitate to{" "}
+            Revisa las preguntas frecuentes, y si aún tienes dudas, no
+            dudes en{" "}
             <Link className="underline" href="/contact">
-              contact us
+              contactanos
             </Link>
             .
           </p>

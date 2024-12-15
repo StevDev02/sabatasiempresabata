@@ -10,27 +10,27 @@ export default function LinksInformation() {
     <ul className="text-[.875rem] font-medium gap-8 grid text-chocolate ">
       <li>
         <Link href="/information/payments">
-          <h3>PAYMENTS</h3>
+          <h3>PAGOS</h3>
         </Link>
       </li>
       <li>
         <Link href="/information/shipping-and-return">
-          <h3>SHIPPING AND RETURNS</h3>
+          <h3>ENVÍOS Y DEVOLUCIONES</h3>
         </Link>
       </li>
       <li>
         <Link href="/information/general-terms">
-          <h3>GENERAL TERMS</h3>
+          <h3>TÉRMINOS Y CONDICIONES</h3>
         </Link>
       </li>
       <li>
         <Link href="/information/privacy-policy">
-          <h3>PRIVACY POLICY</h3>
+          <h3>POLÍTICA DE PRIVACIDAD</h3>
         </Link>
       </li>
       <li>
         <Link href="/information/cookie-policy">
-          <h3>COOKIE POLICY</h3>
+          <h3>POLÍTICA DE COOKIES</h3>
         </Link>
       </li>
     </ul>

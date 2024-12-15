@@ -30,7 +30,7 @@ export default function Footer() {
               <div className="grid gap-2">
                 <div className="footer--LinkList__Item">
                   <a className="font-normal text-base" href="/contact">
-                    Contact us
+                    Contactanos
                   </a>
                 </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
                     className="font-normal text-base"
                     href="/information/payments"
                   >
-                    Payments
+                    Pagos
                   </a>
                 </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
                     className="font-normal text-base"
                     href="/information/shipping-and-return"
                   >
-                    Shipping &amp; Returns
+                    Envíos y devoluciones
                   </a>
                 </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
                     className="font-normal text-base"
                     href="/information/general-terms"
                   >
-                    General Terms
+                    Términos generales
                   </a>
                 </div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
                     className="font-normal text-base"
                     href="/information/privacy-policy"
                   >
-                    Privacy Policy
+                    Política de privacidad
                   </a>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Footer() {
               aria-label="Open Dropdown"
               tabIndex={0}
             >
-              <p className="font-medium text-lg">About Us</p>
+              <p className="font-medium text-lg">Sobre nosotros</p>
               <span className="Dropdown--Plus not_desktop"></span>
             </div>
             <div className="Dropdown--Content" aria-hidden="true">
@@ -91,23 +91,23 @@ export default function Footer() {
                     className="font-normal text-base"
                     href="/blogs/the-story-of-sabata"
                   >
-                    The Story of Sabata
+                    La historia de Sabata
                   </a>
                 </div>
 
                 <div className="footer--LinkList__Item">
                   <a className="font-normal text-base" href="/blogs/the-story-of-sabata#sabata-in-the-world">
-                    Sabata in the World
+                    Sabata en el mundo
                   </a>
                 </div>
                 <span className="Dropdown--Plus not_desktop"></span>
-                <p className="font-medium text-lg">Size Guide</p>
+                <p className="font-medium text-lg">Guía de tallas</p>
                 <div className="footer--LinkList__Item">
                   <a
                     className="font-normal text-base"
                     href="/blogs/size-guide-for-women"
                   >
-                    Size Guide for Women
+                    Guía de tallas para mujeres
                   </a>
                 </div>
 
@@ -116,7 +116,7 @@ export default function Footer() {
                     className="font-normal text-base"
                     href="/blogs/size-guide-for-men"
                   >
-                    Size Guide for Men
+                    Guía de tallas para hombres
                   </a>
                 </div>
               </div>
@@ -168,11 +168,11 @@ export default function Footer() {
                 aria-label="Open Dropdown"
                 tabIndex={0}
               >
-                <p className="font-medium text-lg">Keep yourself updated!</p>
+                <p className="font-medium text-lg">¡Mantente actualizado!</p>
                 <span className="Dropdown--Plus not_desktop"></span>
               </div>
               <p className="font-normal text-base">
-                Subscribe to get our weekly newsletter.
+                Suscríbete para recibir nuestro boletín semanal.
               </p>
 
               <form
@@ -609,13 +609,13 @@ export default function Footer() {
         <div className="w-full  h-[74px] max-h-[74px] border-green-400">
           <ul className="flex w-full translate-y-4 h-[42px] items-center justify-center gap-4 text-[#514e4c] text-[.75rem] text-center">
             <li>
-              <Link href="/information/general-terms">/ General Terms /</Link>
+              <Link href="/information/general-terms">/ Términos y condiciones /</Link>
             </li>
             <li>
-              <Link href="/information/privacy-policy">/ Privacy Policy /</Link>
+              <Link href="/information/privacy-policy">/ Política de privacidad /</Link>
             </li>
             <li>
-              <Link href="/information/cookie-policy">/ Cookie Policy /</Link>
+              <Link href="/information/cookie-policy">/ Política de cookies /</Link>
             </li>
           </ul>
         </div>
