@@ -1,13 +1,13 @@
 "use client";
 
 import FWButtonComponent from "@/components/Button/FWButton";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import useStoreAuth from "../(app)/components/Contenedores/Login-Register/store/useStoreAuth";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { usePassword } from "../(app)/components/hooks/usePassword";
 
-export default function ResetPassword() {
+function ResetPasswordContent() {
   const [emailError, setEmailError] = useState<string | null>(null);
 
   const { resetPasswordEmail, isResetPasswordEmail, isLoading, error } =
@@ -272,4 +272,21 @@ export default function ResetPassword() {
       </div>
     </main>
   );
+}
+
+// Componente envoltorio para manejar el token
+function ResetPasswordWrapper() {
+  return (
+    <Suspense fallback={
+      <div className="flex justify-center items-center h-screen">
+        <p>Cargando...</p>
+      </div>
+    }>
+      <ResetPasswordContent />
+    </Suspense>
+  );
+}
+
+export default function ResetPassword() {
+  return <ResetPasswordWrapper />;
 }
